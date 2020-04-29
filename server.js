@@ -19,6 +19,12 @@ app.engine("handlebars", exphbs({
 }));
 app.set("view engine", "handlebars");
 
+//HTML Routes
+app.get("/", (req, res) => {
+    res.render("index")
+});
+//Once we hit the / route, the response will render index.handlebars
+
 app.listen(PORT, function(){
     console.log("app is running on the PORT " + PORT)
 });
