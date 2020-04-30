@@ -25,6 +25,10 @@ app.get("/", (req, res) => {
 });
 //Once we hit the / route, the response will render index.handlebars
 
+app.get("/saved", (req, res) => {
+    res.render("saved")
+});
+
 app.listen(PORT, function(){
     console.log("app is running on the PORT " + PORT)
 });
